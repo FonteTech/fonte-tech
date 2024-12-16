@@ -1,0 +1,489 @@
+/* styles.css */
+
+body {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color: #000000;
+    line-height: 1.6;
+  }
+  /* Ajustes para dispositivos móveis */
+  @media only screen and (max-width: 768px) {
+    body {
+      font-size: 16px; /* Tamanho de fonte maior para melhor leitura */
+      padding: 10px; /* Adiciona um pouco de espaço em dispositivos menores */
+    }
+  }
+  
+  /* Ajustes para dispositivos maiores (desktop) */
+  @media only screen and (min-width: 769px) {
+    body {
+      font-size: 18px; /* Tamanho de fonte maior para telas grandes */
+      padding: 20px; /* Mais espaçamento em telas grandes */
+    }
+  }
+  
+    
+  .header {
+    background-color:#000000;
+    color:#f1f1f1;
+    text-align: center;
+    padding: 50px 20px;
+  }
+
+
+  .header img {
+    max-width: 70%; /* A imagem vai ocupar no máximo 100% da largura do contêiner */
+    height: auto; /* A altura será ajustada proporcionalmente */
+    display: block; /* Remove o espaço extra abaixo da imagem */
+    margin: 0 auto; /* Centraliza a imagem dentro do contêiner */
+}
+
+/* Ajustes para telas menores */
+@media only screen and (max-width: 768px) {
+    .header img {
+        max-width: 80%; /* Reduz a largura da imagem em telas menores */
+    }
+}
+
+/* Ajustes para telas muito pequenas (smartphones em modo retrato) */
+@media only screen and (max-width: 480px) {
+    .header img {
+        max-width: 70%; /* Reduz ainda mais em telas pequenas */
+    }
+}
+  
+  .header-content h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  
+  .header-content p {
+    font-size: 18px;
+  }
+  
+  .main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .benefits {
+  
+    font-family: neue system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    background-color: #200909;
+    color: white;
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    width: 200;
+    background-image: url('52909745-d481-4c54-8f75-3553b8dd2410.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    
+  }
+
+  .benefits p{
+    text-align: center;
+  }
+
+
+  .videos {
+    background-color: black;
+    border: 10px solid red;
+    border-radius: 10px;
+    padding: 20px;  
+    width: auto; /* Largura ajustável */
+    max-width: 900px; /* Aumenta a largura máxima para telas grandes */
+    color: white;
+    text-align: center;
+    margin: 100px auto;
+  }
+  
+  .videos iframe, 
+  .videos video {
+    width: 100%; /* O vídeo ocupa toda a largura da caixa */
+    height: 500px; /* Altura maior para o vídeo */
+  }
+  
+  /* Ajustes para dispositivos menores */
+  @media only screen and (max-width: 780px) {
+    .videos {
+      padding: 20px; /* Ajusta o padding para telas menores */
+      border-width: 8px; /* Diminui a espessura da borda */
+      font-size: 16px; /* Ajusta o tamanho do texto */
+    }
+  
+    .videos iframe, 
+    .videos video {
+      width: 100%; /* Mantém o vídeo responsivo */
+      height: 350px; /* Altura maior, mas proporcional para dispositivos menores */
+    }
+  }
+  
+  /* Ajustes para telas muito pequenas (ex: smartphones) */
+  @media only screen and (max-width: 480px) {
+    .videos {
+      padding: 15px; /* Reduz o padding em smartphones */
+      border-width: 6px; /* Reduz ainda mais a borda */
+    }
+  
+    .videos iframe, 
+    .videos video {
+      width: 100%; /* Vídeo ocupa toda a largura disponível */
+      height: 300px; /* Altura maior em telas pequenas */
+    }
+  }
+  
+  button {
+    background-color: #a00008;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 0 50px rgba(255, 0, 0, 0.493); /* Sombra que envolve o botão */
+    transition: transform 0.2s, background-color 0.3s;
+    margin: 40px auto;
+  }
+  
+  button:hover {
+    background-color: #ff3908;
+    box-shadow: 0 0 25px rgba(255, 0, 0, 0.4); /* Sombra mais intensa ao passar o mouse */
+    transform: scale(1.1); /* Aumenta o tamanho do botão */
+    animation: pulse 0.6s infinite; /* Inicia o efeito de pulsar */
+   
+  }
+  
+  .product {
+    line-height: 2;
+    margin-bottom: 20px;
+    color: #f1f1f1;
+    margin-bottom: 20px;
+    margin: 100px auto;
+
+    
+  }
+
+  /* Estilos gerais para o carrossel */
+.carousel {
+    width: 100%; /* Largura do carrossel */
+    overflow: hidden; /* Esconde as imagens que saem da área visível */
+    margin: 0 auto; /* Centraliza o carrossel */
+}
+
+.carousel-images {
+    display: flex; /* Exibe as imagens em linha */
+    animation: slide 12s infinite; /* Animação que move as imagens para o lado */
+    
+}
+
+.carousel-images img {
+    width: 100%; /* As imagens vão ocupar a largura do carrossel */
+    height: 600px; /* Define a altura do carrossel */
+    object-fit: cover; /* Garante que as imagens mantenham a proporção */
+}
+
+/* Animação para fazer as imagens deslizar */
+@keyframes slide {
+    0% {
+        transform: translateX(0); /* A primeira imagem começa à esquerda */
+    }
+    20% {
+        transform: translateX(-100%); /* A primeira imagem sai da tela */
+    }
+    40% {
+        transform: translateX(-200%); /* Segunda imagem entra */
+    }
+    60% {
+        transform: translateX(-300%); /* Terceira imagem entra */
+    }
+    80% {
+        transform: translateX(-400%); /* Quarta imagem entra */
+    }
+    100% {
+        transform: translateX(-500); /* Retorna à posição inicial */
+    }
+    120%{transform: translateX(-600); 
+    }
+    140%{transform: translateX(-700); 
+}
+}
+
+.carousel-images img {
+    width: 100%; /* As imagens vão ocupar a largura do carrossel */
+    height: 400px; /* Define a altura do carrossel */
+    object-fit: cover; /* Garante que as imagens mantenham a proporção */
+    margin-right: 20px; /* Espaço de 20px entre as imagens */
+}
+
+   
+  /* Estilo base para imagens do produto */
+  .product-image {
+    line-height: 1.8;
+    width: 100%; /* Ocupa toda a largura disponível */
+    max-width: 700px; /* Limita a largura máxima */
+    border-radius: 10px;
+    margin: 20px 0;
+    padding: 20px; /* Reduzido para melhorar em telas pequenas */
+    font-weight: bold;
+    transition: transform 0.3s ease-in-out; /* Animação suave */
+  }
+  
+  .product-image:hover {
+    transform: scale(1.1); /* Aumenta levemente a imagem ao passar o mouse */
+  }
+  
+  /* Estilo base para o parallax */
+  .parallax {
+    background-attachment: fixed; /* Efeito parallax */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px; /* Altura padrão */
+  }
+  
+  /* Ajustes para dispositivos menores */
+  @media only screen and (max-width: 768px) {
+    .product-image {
+      padding: 15px; /* Padding menor em telas pequenas */
+      font-size: 14px; /* Tamanho de fonte ajustado */
+    }
+  
+    .parallax {
+      background-attachment: scroll; /* Desativa o efeito parallax */
+      height: 300px; /* Altura reduzida em dispositivos móveis */
+    }
+  }
+  
+  /* Ajustes para telas muito pequenas (ex: smartphones) */
+  @media only screen and (max-width: 480px) {
+    .product-image {
+      padding: 10px; /* Padding ainda menor */
+      font-size: 12px; /* Fonte compactada */
+    }
+  
+    .parallax {
+      background-attachment: scroll; /* Efeito parallax desativado para evitar problemas de desempenho */
+      height: 250px; /* Altura reduzida para se adequar a telas pequenas */
+    }
+  }
+  
+  .caixa {
+    background-color: black;
+    border: 10px solid red;
+    border-radius: 10px;
+    padding: 20px;
+    width: 600px;
+    color: white;
+    text-align: center;
+    margin: 20px auto;
+    width: 90%; /* Define uma largura inicial flexível */
+    max-width: 800px; /* Limita a largura máxima em telas grandes */
+  }
+  
+  /* Ajustes para telas menores (dispositivos móveis) */
+  @media only screen and (max-width: 768px) {
+    .caixa {
+      padding: 15px; /* Reduz o padding para economizar espaço */
+      border-width: 5px; /* Diminui a espessura da borda */
+      font-size: 16px; /* Ajusta o tamanho da fonte para melhor leitura */
+    }
+  }
+  
+  /* Ajustes para telas muito pequenas (ex: smartphones) */
+  @media only screen and (max-width: 480px) {
+    .caixa {
+      padding: 10px; /* Reduz ainda mais o padding */
+      border-width: 4px; /* Reduz a borda para telas muito pequenas */
+      font-size: 14px; /* Fonte mais compacta */
+    }
+  }
+  
+  
+  .caixa ul {
+    list-style: disc;
+    padding-inline: 50px;
+    
+  }
+  
+  .caixa li {
+    font-size: 18px; /* Aumenta o tamanho da fonte */
+    font-weight: bold; /* Aplica negrito */
+    font-family: "Cursive", sans-serif; /* Estilo manuscrito */
+    margin: 10px 0;
+  }
+  
+
+  
+  .vantagem{
+    font-size: 25px;
+    color: rgb(245, 236, 236);
+    text-shadow: 0px 10px 70px rgba(247, 14, 14, 0.979);
+    padding: 30px;
+    
+  }
+  
+  .BONUS h2{
+  
+    font-size: 40px;
+    color: rgb(245, 236, 236);
+    text-shadow: 0px 10px 70px rgba(247, 14, 14, 0.979);
+    padding: 30px;
+  
+  }
+  
+  .BONUS p{
+    font-family: neue system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    background-color: #200909;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 50px;
+    margin-bottom: 50px;
+    width: 200;
+    background-image: url('52909745-d481-4c54-8f75-3553b8dd2410.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  
+  }
+  
+  .container {
+    text-align: center;
+    padding: 20px;
+}
+
+.offer-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.offer-box {
+    background-color: #000000;
+    border: 2px solid red;
+    border-radius: 10px;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    margin: auto;
+}
+
+.old-price {
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+    margin: 2px 0;
+}
+
+.strikethrough {
+    font-weight: bold;
+    color: red ;
+    text-decoration: line-through;
+    
+}
+
+.installment {
+    font-size: 1.5rem; /* Tamanho padrão */
+    color: white;
+}
+
+/* Ajuste para dispositivos móveis (ex: celulares) */
+@media only screen and (max-width: 480px) {
+    .installment {
+        text-align: left; /* Alinha o texto à esquerda */
+        margin-left: 10px; /* Opcional: Adiciona espaçamento extra para garantir alinhamento */
+    }
+}
+
+
+.preco{
+    font-family: 'Poppins', Arial, sans-serif; 
+    font-weight: bold;
+    font-size: 4rem;
+    color: rgb(247, 189, 0);
+   
+    
+}
+.new-price {
+    font-size: 1rem;
+    color: rgb(255, 255, 255);
+    margin: -30px 0;
+    
+}
+.vista {
+
+    font-size: 1rem;
+    color: rgb(255, 255, 255);
+    
+
+  
+}
+
+.highlight {
+    text-align: left;
+    font-weight: bold;
+}
+
+.timer-text {
+    color: #f1f1f1;
+    font-size: 1.2rem;
+    margin: 50px 0;
+}
+
+.guarantee-image {
+    display: block;
+    margin: 10px auto; /* Centraliza e adiciona espaçamento */
+    max-width: 150px; /* Ajusta o tamanho máximo da imagem */
+    height: auto;
+}
+
+
+
+.benefits {
+    text-align: left;
+    margin: 20px 0;
+    padding: 0;
+    list-style: none;
+}
+
+.benefits li {
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 20px;
+    font-size: 1rem;
+}
+
+.cta-button:hover {
+    background-color: darkred;
+}
+
+.payment-methods {
+    font-size: 0.9rem;
+    color: white;
+    margin-top: 20px;
+}
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    font-size: 14px;
+  }
